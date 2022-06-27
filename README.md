@@ -1,4 +1,6 @@
-# DandelionInterface
+# Dandelion Interface
+
+Frontend for a [Dandelion API](https://dandelion.eu/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
 
