@@ -15,6 +15,9 @@ In order to use Dandelion API, you will need to paste your token ([found here](h
 
 Disclaimer: I have written this solution around 10.2021., so there could be some changes to the currrent version of Dandelion API, and some of the tools mentioned above may not work any more.
 
+In order to use this app, you will need to download Node.js.
+In order to install node modules, navigate your CLI to project folder and run "run npm install".
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
 
 ## Development server
