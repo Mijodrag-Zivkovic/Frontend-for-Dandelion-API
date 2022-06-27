@@ -1,0 +1,20 @@
+<h1>Sentiment Analysis</h1>
+<label>Your text goes here</label>
+<br>
+<textarea [(ngModel)]="text" id="text" name="text" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+<br>
+<label>Select language:</label>
+<br>
+<select id="lang" name="lang" [(ngModel)]="lang">
+  <option value="auto">auto</option>
+  <option value="en">english</option>
+  <option value="it">italian</option>
+</select>
+<br>
+<br>
+<input type="button" value="Send request"  (click)="sendRequest()">
+<br>
+<div *ngIf="showResults;">
+  <h2>Sentiment type: <span [style]="{color: interpolation}">{{result.type}}</span></h2>
+
+</div>

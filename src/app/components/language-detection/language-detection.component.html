@@ -1,0 +1,24 @@
+<h1>Language detection</h1>
+<label>Your text goes here</label>
+<br>
+<textarea [(ngModel)]="text" id="text" name="text" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+<br>
+<input type="checkbox" id="clean" [(ngModel)]="clean"> <label>Clean</label>
+<br>
+<input type="button" value="Send request"  (click)="sendRequest()">
+<br>
+<div *ngIf="showResults">
+  <div *ngIf="results.length>0;else noResults">
+    <h2>Languages detected:</h2>
+    <br>
+    <div *ngFor="let result of results;" class="mb-2">
+      <h3>Language: {{result.lang}} - Confidence: {{result.confidence*100}}%</h3>
+    </div>
+  </div>
+  <ng-template #noResults>
+    <div>
+      <h3>Nema rezultata</h3>
+    </div>
+  </ng-template>
+</div>
+

@@ -1,0 +1,14 @@
+<h1>Text Similarity</h1>
+<label>First text</label>
+<br>
+<textarea [(ngModel)]="text1" id="text1" name="text1" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+<br>
+<label>Second text</label>
+<br>
+<textarea [(ngModel)]="text2" id="text2" name="text2" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+<br>
+<input type="button" value="Send request"  (click)="sendRequest()">
+<br>
+<div *ngIf="showResults;">
+  <h3>Similarity: {{result}} %</h3>
+</div>

@@ -1,0 +1,22 @@
+<h1>Entity Extraction</h1>
+<label>Your text</label>
+<input type="text" [(ngModel)]="text" id="text" name="text">
+<br>
+<label>Minimal Confidence</label>
+<input type="text" (input)="checkMinConfidence($event)" id="min_confidence" name="min_confidence" pattern="([0](.[0-9]+)?)?|1">
+<br>
+<input type="checkbox" id="include_abstract" [(ngModel)]="include_abstract"> <label>Include abstract </label>
+<br>
+<input type="checkbox" id="include_categories" [(ngModel)]="include_categories"> <label>Include categories </label>
+<br>
+<input type="checkbox" id="include_image" [(ngModel)]="include_image"> <label>Include image </label>
+<br>
+<input type="button" value="Send request" [disabled]="sendButtonDisabled" (click)="sendRequest()">
+<br>
+<div *ngIf="showResults;">
+  <h2>Entities</h2>
+  <div *ngFor="let result of results;" class="mb-2">
+    <h3>{{result.title}}</h3>
+<!--    <p>{{ post.body }}</p>-->
+  </div>
+</div>

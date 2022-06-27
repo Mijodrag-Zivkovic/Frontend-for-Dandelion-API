@@ -1,0 +1,8 @@
+<h1>Request history</h1>
+<div *ngFor="let h of history;" class="mb-2">
+  <h4>{{h.date}}</h4>
+  <span style="color:green">{{h.method}}</span>
+  {{h.url}}
+  <hr>
+  <!--    <p>{{ post.body }}</p>-->
+</div>

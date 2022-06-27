@@ -1,0 +1,21 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a [routerLink]="'/'" class="navbar-brand">Home</a>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a [routerLink]="'/entityExtraction'" class="nav-link active" aria-current="page">Entity Extraction</a>
+          <a [routerLink]="'/textSimilarity'" class="nav-link active" aria-current="page">Text Similarity</a>
+          <a [routerLink]="'/languageDetection'" class="nav-link active" aria-current="page">Language Detection</a>
+          <a [routerLink]="'/sentimentAnalysis'" class="nav-link active" aria-current="page">Sentiment Analysis</a>
+          <a [routerLink]="'/configuration'" class="nav-link active" aria-current="page">Configuration</a>
+          <a [routerLink]="'/history'" class="nav-link active" aria-current="page">History</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="container pt-3">
+  <router-outlet></router-outlet>
+</div>
